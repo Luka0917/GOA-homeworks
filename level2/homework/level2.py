@@ -1,0 +1,2 @@
+print("akaki sixarulidze, alexandre katsarava, andria svanidze, anna grigolia, atuka khuskivadze, barbare tinikashvili, mate beridze, beso gelxauri, daniel abramiani, davit narimanidze")
+print("pirveli gakvetilidan gamomdinare me dzalian momewona GOA radgan aq yvela dzalian megobrulia, uyuradgebod ar darchebi da me vfiqrob rom GOA shi chem tavs vipovi")
