@@ -44,15 +44,11 @@ for i in range(10):
 print("-------9-------")
 
 number = 8
-print(number >= 1 and number <= 10)
-print(number >= 1 and number <= 4)
-print(number > 5 and number <= 10)
-print(number > 5 and number > 10)
+for i in range(10):
+    print(number >= 1 and number <= 10)
 
 print("-------10-------")
 
 number = 5
-print(number >= 1 or number <= 10)
-print(number >= 1 or number <= 4)
-print(number > 5 or number <= 10)
-print(number > 5 or number > 10)
+for i in range(10):
+    print(number > 3 or number > 10)
