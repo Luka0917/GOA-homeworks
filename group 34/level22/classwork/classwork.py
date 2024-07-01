@@ -132,6 +132,32 @@ print(prime_number(3))
 
 print("----- 15 -----")
 
+def print_sum(num):
+    return sum(num)
+
+print(print_sum([1, 2, 3, 4, 5]))
+
 print("----- 16 -----")
 
+def print_vowels(word):
+    vowels = "aeiouAEIOU"
+    count = 0
+    for char in word:
+        if char in vowels:
+            count += 1
+    return count
+
+print(print_vowels("GOA"))
+
 print("----- 17 -----")
+
+def print_string(word):
+    uppercase_list = []
+
+    for w in word:
+        upper_w = w.upper()
+
+        uppercase_list.append(upper_w)
+    return uppercase_list
+
+print(print_string("luka"))
