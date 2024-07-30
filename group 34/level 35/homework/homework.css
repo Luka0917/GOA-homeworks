@@ -1,0 +1,28 @@
+div{
+    text-align: center;
+}
+
+h2{
+    color: #465b65;
+}
+
+input{
+    width: 250px;
+    height: 30px;
+    border-radius: 8px;
+    background-color: #e8f0fe;
+    border-width: 1px;
+    border-color: white;
+}
+a, p{
+    font-size: small;
+
+}
+button{
+    width: 250px;
+    height: 30px;
+    border-radius: 8px;
+    color:white;
+    background-color: #2962ff;
+    border-color: white;
+}

@@ -66,3 +66,32 @@ print(text5.split("t"))
 
 print("----- 12 -----")
 
+# https://www.codewars.com/kata/5259b20d6021e9e14c0010d4/train/python
+
+def reverse_words(text):
+    words = text.split(' ')
+    
+    result = ""
+    
+    for i in range(len(words)):
+        reversed_word = words[i][::-1]
+        
+        result += reversed_word
+        
+        if i < len(words) - 1:
+            result += " "
+    return result
+
+print("----- 13 -----")
+
+# https://www.codewars.com/kata/54ff0d1f355cfd20e60001fc/train/python
+
+def factorial(n):
+    total = 1
+    if n < 0 or n > 12:
+        raise ValueError("Value Error")
+    
+    else:
+        for num in range(1, n+1):
+            total *= num
+        return total
