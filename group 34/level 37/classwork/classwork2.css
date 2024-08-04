@@ -1,0 +1,28 @@
+body{
+    text-align: center;
+    background-color: #E2DAD6;
+}
+header{
+    background-color: #021526;
+    border-radius: 50px;
+    padding: 20px;
+}
+h1{
+    color: #6482AD;
+}
+a{
+    color: #508C9B;
+}
+img{
+    border: 2px solid;
+    border-radius: 25px;
+}
+p{
+    color: #405D72;
+}
+h2, h3, ul{
+    color: #508C9B;
+}
+#contact-me{
+    color: #402E7A;
+}

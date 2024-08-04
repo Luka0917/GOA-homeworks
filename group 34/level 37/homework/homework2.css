@@ -1,0 +1,17 @@
+body{
+    text-align: center;
+    background-color: #F3FEB8;
+}
+.bike{
+    border-radius: 50px;
+    border: 2px solid;
+}
+h1, h2, h3{
+    color: #EB5B00;
+}
+p{
+    color: #219C90;
+}
+ul{
+    color: #5A72A0;
+}
