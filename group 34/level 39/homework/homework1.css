@@ -1,0 +1,35 @@
+#div-1{
+    background-color: #076921;
+    width: 100%;
+}
+#div-1 p{
+    text-align: left;
+}
+#div-2{
+    background-color: #1facb1;
+    width: 80%;
+}
+#div-2 p{
+    text-align: center;
+}
+#div-3{
+    background-color: #b11f99;
+    width: 60%;
+}
+#div-3 p{
+    text-align: right;
+}
+#div-4{
+    background-color: #ddd015;
+    width: 40%;
+}
+#div-4 p{
+    text-align: center;
+}
+#div-5{
+    background-color: #ff2121;
+    width: 20%;
+}
+#div-5 p{
+    text-align: left;
+}

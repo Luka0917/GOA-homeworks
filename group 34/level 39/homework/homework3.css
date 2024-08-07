@@ -1,0 +1,39 @@
+#p-1{
+    text-decoration: underline dotted #076921;
+    padding-left: 200px;
+}
+#p-2{
+    text-decoration: line-through;
+    padding-left: 100px;
+}
+#p-3{
+    color: #ff0000;
+}
+#p-5{
+    text-decoration: underline;
+    padding-left: 100px;
+}
+#p-6{
+    text-decoration: underline dotted #076921;
+    padding-left: 200px;
+}
+#p-7{
+    text-decoration: line-through;
+}
+#p-8{
+    text-decoration: overline;
+}
+#p-9{
+    color: #076921;
+    text-decoration: overline;
+    padding-left: 200px;
+}
+#p-10{
+    color: #808080;
+    text-decoration: overline;
+    padding-left: 100px;
+}
+#p-11{
+    text-decoration: underline dotted #076921;
+    padding-left: 200px;
+}
