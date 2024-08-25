@@ -46,3 +46,14 @@ def stray(arr):
 
 # https://www.codewars.com/kata/59f08f89a5e129c543000069/train/python
 
+def dup(arry):
+    news = []
+    for w in arry:
+        temp = ""
+        last_char = ""
+        for char in w:
+            if char != last_char:
+                temp += char
+                last_char = char
+        news.append(temp)
+    return news

@@ -58,7 +58,25 @@ def averages(arr):
 
 # https://www.codewars.com/kata/5effa412233ac3002a9e471d
 
-
+def add(num1, num2):
+    num1 = str(num1)[::-1]
+    num2 = str(num2)[::-1]
+    max_len = max(len(num1), len(num2))
+    result = []
+    for i in range(max_len):
+        if i < len(num1):
+            digit1 = int(num1[i])
+        else:
+            digit1 = 0
+        if i < len(num2):
+            digit2 = int(num2[i])
+        else:
+            digit2 = 0
+        sum_digits = digit1 + digit2
+        result.append(str(sum_digits))
+    result.reverse()
+    result_str = ''.join(result)
+    return int(result_str)
 
 # 7
 
@@ -74,13 +92,39 @@ def last_survivor(letters, coords):
 
 # https://www.codewars.com/kata/5768a693a3205e1cc100071f
 
+def initialize_names(name):
+    parts = name.split()
+    if len(parts) == 1:
+        return parts[0]
+    elif len(parts) == 2:
+        return f"{parts[0]} {parts[1]}"
 
+    first_name = parts[0]
+    last_name = parts[-1]
+    middle_initials = []
+    for part in parts[1:-1]:
+        middle_initials.append(part[0] + '.')
+    
+    middle_initials_str = ' '.join(middle_initials)
+    return f"{first_name} {middle_initials_str} {last_name}"
 
 # 9
 
 # https://www.codewars.com/kata/5701e43f86306a615c001868
 
-
+def get_issuer(number):
+    number_str = str(number)
+    length = len(number_str)
+    if length == 15 and (number_str.startswith('34') or number_str.startswith('37')):
+        return "AMEX"
+    elif length == 16 and number_str.startswith('6011'):
+        return "Discover"
+    elif length == 16 and (number_str.startswith('51') or number_str.startswith('52') or number_str.startswith('53') or number_str.startswith('54') or number_str.startswith('55')):
+        return "Mastercard"
+    elif (length == 13 or length == 16) and number_str.startswith('4'):
+        return "VISA"
+    
+    return "Unknown"
 
 # 10
 
