@@ -12,7 +12,3 @@ def alphabet_position(text):
         if letter in alphabet:
             result.append(str(alphabet.index(letter) + 1))
     return " ".join(result)
-
-# 2
-
-# 
