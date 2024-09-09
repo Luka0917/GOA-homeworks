@@ -1,0 +1,32 @@
+body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+.divs{
+    width: 200px;
+    height: 200px;
+    background-color: #1230AE;
+    border: 3px solid #6CBEC7;
+}
+#div-1:hover{
+    transform: translate(-100px, -100px) scale(2) rotate(45deg) skew(30deg, 30deg);
+    transform-origin: top right;
+}
+#div-2:hover{
+    transform: translate(100px, 100px) scale(1.5) rotate(30deg) skew(20deg, 20deg);
+    transform-origin: bottom left;
+}
+#div-3:hover{
+    transform: translate(-30px, -50px) scale(3) rotate(20deg) skew(10deg, 15deg);
+    transform-origin: top left;
+}
+#div-4:hover{
+    transform: translate(50px, 80px) scale(2) rotate(50deg) skew(40deg, 30deg);
+    transform-origin: bottom right;
+}
+#div-5:hover{
+    transform: translate(-100px, -100px) scale(2) rotate(45deg) skew(30deg, 30deg);
+    transform-origin: top right;
+}
