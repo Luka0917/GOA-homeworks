@@ -1,0 +1,19 @@
+*{
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+div{
+    background-color: #ff0000;
+    width: 200px;
+    height: 200px;
+}
+div:hover{
+    transform: rotate(45deg) scale(2) translate(30px, 30px) skew(45deg);
+}

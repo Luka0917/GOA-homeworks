@@ -1,0 +1,40 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+div{
+    width: 400px;
+    height: 400px;
+    background-color: #ffff00;
+
+    animation-name: first_animation;
+    animation-duration: 10s;
+    animation-iteration-count: infinite;
+}
+@keyframes first_animation{
+    0%{
+        background-color: #ffff00;
+    }
+    20%{
+        background-color: #00ff00;
+    }
+    40%{
+        background-color: #ff00ff;
+    }
+    60%{
+        background-color: #ff0000;
+    }
+    80%{
+        background-color: #0000ff;
+    }
+    100%{
+        background-color: #00ffff;
+    }
+}
