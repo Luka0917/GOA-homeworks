@@ -1,0 +1,3 @@
+function nameAlert(){
+    alert("Luka")
+};

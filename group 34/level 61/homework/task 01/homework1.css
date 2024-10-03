@@ -1,0 +1,101 @@
+@import url('https://fonts.googleapis.com/css2?family=Karla:ital,wght@0,200..800;1,200..800&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Karla;
+}
+body{
+    background-color: hsl(148, 38%, 91%);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+#main{
+    background-color: hsl(0, 0%, 100%);
+    padding: 30px;
+    border-radius: 15px;
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    width: 550px;
+}
+#top-p{
+    font-size: 28px;
+    font-weight: 700;
+}
+#name{
+    display: flex;
+    flex-direction: row;
+    gap: 15px;
+}
+#firstName{
+    display: flex;
+    flex-direction: column;
+}
+#lastName{
+    display: flex;
+    flex-direction: column;
+}
+.input-border{
+    width: 237.5px;
+    height: 40px;
+    border-radius: 7px;
+    border: 1.5px solid hsl(186, 15%, 59%);
+}
+#email{
+    height: 40px;
+    border-radius: 7px;
+    border: 1.5px solid hsl(186, 15%, 59%);
+}
+#check-div{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    gap: 15px;
+}
+.check-12{
+    width: 237.5px;
+    height: 40px;
+    border-radius: 7px;
+    border: 1.5px solid hsl(186, 15%, 59%);
+    display: flex;
+    padding-left: 20px;
+    align-items: center;
+    gap: 10px;
+}
+.check-12:active{
+    background-color: hsl(148, 38%, 91%);
+}
+#message{
+    height: 90px;
+    border-radius: 7px;
+    border: 1.5px solid hsl(186, 15%, 59%);
+}
+#last-div{
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+button{
+    width: 490px;
+    height: 40px;
+    border-radius: 7px;
+    border: none;
+    color: hsl(0, 0%, 100%);
+    background-color: hsl(169, 82%, 27%);
+}
+button:hover{
+    background-color: hsl(171, 83%, 14%);
+}
+label{
+    font-size: 15px;
+}
+input:hover{
+    border: 2px solid hsl(169, 82%, 27%);
+}
+input:active{
+    border: 2px solid hsl(169, 82%, 27%);
+}

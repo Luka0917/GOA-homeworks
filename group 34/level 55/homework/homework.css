@@ -1,0 +1,46 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Lexend+Deca:wght@100..900&display=swap');
+
+body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: hsl(233, 47%, 7%);
+}
+#main{
+    background-color: hsl(244, 38%, 16%);
+    display: flex;
+    width: 1000px;
+    height: 446px;
+}
+#top-p, .num-p{
+    color: hsl(0, 0%, 100%);
+    font-family: Lexend Deca;
+}
+b{
+    color: hsl(277, 64%, 61%);
+}
+.num-p{
+    font-size: 22px;
+}
+#top-p{
+    font-size: 32px;
+    font-weight: 700;
+}
+#text{
+    padding: 50px;
+}
+#text-p, .btm-p{
+    font-family: Inter;
+    color: hsla(0, 0%, 100%, 0.6);
+}
+#numbers{
+    display: flex;
+    justify-content: space-between;
+    gap: 30px;
+    margin-top: 70px;
+}
+.nums{
+    line-height: 1px;
+}
