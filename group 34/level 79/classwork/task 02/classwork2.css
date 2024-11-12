@@ -1,0 +1,28 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+div{
+    background-color: red;
+    width: 100px;
+    height: 100px;
+    animation: moveCube 10s infinite;
+}
+@keyframes moveCube {
+    0% {
+        transform: translate(0px, 0px);
+    }
+    25% {
+        transform: translate(1766px, 0px);
+    }
+    50% {
+        transform: translate(1766px, 812px);
+    }
+    75% {
+        transform: translate(0px, 812px);
+    }
+    100% {
+        transform: translate(0px, 0px);
+    }
+}

@@ -1,0 +1,29 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+#main{
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+#btns{
+    display: flex;
+    gap: 50px;
+}
+#divs-main{
+    display: flex;
+    gap: 50px;
+}
+.divs{
+    background-color: blue;
+    color: #fff;
+    opacity: 0;
+}
