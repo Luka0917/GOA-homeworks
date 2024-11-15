@@ -1,0 +1,19 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    height: 100vh;
+}
+div{
+    width: 100px;
+    height: 100px;
+    background-color: red;
+    transform: translate(889px);
+    opacity: 0;
+}
