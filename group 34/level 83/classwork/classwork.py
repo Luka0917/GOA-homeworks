@@ -7,6 +7,6 @@ def password_function(length = random.randint(4, 8), symbols = ["!", "@", "#", "
         password_numbers = random.choice(numbers)
         password += password_symbols
         password += password_numbers
-    print(password)
+    return password
 
-password_function()
+print(password_function())
