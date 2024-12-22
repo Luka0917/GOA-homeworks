@@ -1,0 +1,38 @@
+@import url('https://fonts.googleapis.com/css2?family=Figtree:ital,wght@0,300..900;1,300..900&family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Oswald:wght@200..700&family=Outfit:wght@100..900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Roboto;
+}
+body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+button{
+    background-color: blue;
+    font-size: 50px;
+}
+button:hover{
+    animation: color 5s infinite;
+}
+@keyframes color{
+    0%{
+        background-color: red;
+    }
+    25%{
+        background-color: green;
+    }
+    50%{
+        background-color: blue;
+    }
+    75%{
+        background-color: orange;
+    }
+    100%{
+        background-color: purple;
+    }
+}
