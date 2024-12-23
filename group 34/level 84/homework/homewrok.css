@@ -1,0 +1,244 @@
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: DM Sans;
+}
+body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: hsl(0, 0%, 96%);
+}
+#main{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    top: 50px;
+    right: 650px;
+}
+
+/* Div-1 */
+
+#div-1{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 300px;
+    height: 500px;
+    background-color: hsl(31, 66%, 93%);
+    padding: 40px;
+    gap: 25px;
+    border-radius: 10px;
+
+    position: absolute;
+    top: 30px;
+    left: 30px;
+}
+#p-1{
+    font-size: 40px;
+    font-weight: 600;
+}
+#img-1{
+    height: 100px;
+}
+#b-1{
+    color: hsl(256, 67%, 59%);
+}
+
+/* Div-2 */
+
+#div-2{
+    background-color: hsl(256, 67%, 59%);
+    width: 600px;
+    height: 450px;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 40px;
+
+    position: absolute;
+    top: 30px;
+    left: 360px;
+}
+#p-2{
+    text-align: center;
+    font-size: 60px;
+    color: #fff;
+}
+#b-2{
+    color: hsl(39, 100%, 71%);
+}
+#img-2{
+    width: 250px;
+    margin-top: 30px;
+    margin-bottom: 8px;
+}
+#p-22{
+    color: #fff;
+    font-size: 18px;
+
+}
+
+/* Div-3 */
+
+#div-3{
+    background-color: hsl(254, 88%, 90%);
+    height: 700px;
+    width: 300px;
+    padding: 40px;
+    gap: 30px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border-radius: 10px;
+
+    position: absolute;
+    top: 30px;
+    left: 990px;
+}
+#p-3{
+    font-size: 40px;
+    font-weight: 600;
+    line-height: 36px;
+}
+#img-3{
+    height: 250px;
+}
+#p-33{
+    font-size: 20px;
+}
+
+/* Div-4 */
+
+#div-4{
+    background-color: hsl(39, 100%, 71%);
+    width: 300px;
+    height: 500px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 40px;
+    gap: 10px;
+    border-radius: 10px;
+
+    position: absolute;
+    top: 560px;
+    left: 30px;
+}
+#p-4{
+    font-size: 40px;
+    font-weight: 600;
+}
+#img-4{
+    width: 230px;
+    margin-top: 30px;
+}
+
+/* Div-5 */
+
+#div-5{
+    background-color: hsl(0, 0%, 100%);
+    width: 250px;
+    height: 250px;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+    gap: 10px;
+
+    position: absolute;
+    top: 520px;
+    left: 400px;
+}
+#img-5{
+    width: 200px;
+}
+#p-5{
+    font-size: 30px;
+    font-weight: 600;
+}
+
+/* Div-6 */
+
+#div-6{
+    background-color: hsl(0, 0%, 100%);
+    width: 250px;
+    height: 250px;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+    gap: 10px;
+
+    position: absolute;
+    top: 800px;
+    left: 400px;
+}
+#img-6{
+    width: 200px;
+    margin-top: 30px;
+}
+#p-6{
+    font-size: 40px;
+    font-weight: 600;
+}
+
+/* Div-7 */
+
+#div-7{
+    background-color: hsl(39, 100%, 71%);
+    width: 250px;
+    height: 250px;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+    gap: 10px;
+
+    position: absolute;
+    top: 520px;
+    left: 700px;
+}
+#img-7{
+    width: 100px;
+}
+#p-7{
+    font-size: 30px;
+    font-weight: 600;
+    line-height: 28px;
+}
+
+/* Div-8 */
+
+#div-8{
+    background-color: hsl(256, 67%, 59%);
+    width: 600px;
+    height: 250px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    border-radius: 10px;
+    padding: 20px;
+
+    position: absolute;
+    top: 800px;
+    left: 700px;
+}
+#img-8{
+    height: 200px;
+}
+#p-8{
+    color: #fff;
+    font-size: 40px;
+    font-weight: 600;
+}
