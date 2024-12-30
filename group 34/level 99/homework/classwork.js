@@ -26,4 +26,4 @@ const func7 = ({name = "Maia", age = 25, city = "Tbilisi" }) => {return `Hello, 
 const func8 = (start = 1, end = 10, step = 1) => {let result = [];for(let i = start; i < end; i += step){result.push(i);}return result;};
 
 // 10
-// ???
+const func9 = (...obj) => {return Object.assign({}, ...obj);};
