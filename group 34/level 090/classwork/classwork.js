@@ -82,20 +82,3 @@ for(let m = 0; m < 12; m++){
     main.appendChild(divs[m])
 }
 body.appendChild(main)
-
-// img slider
-
-let slides = document.querySelectorAll('.slide');
-let currentIndex = 0;
-
-document.getElementById('next').addEventListener('click', () => {
-  slides[currentIndex].style.display = 'none';
-  currentIndex = (currentIndex + 1) % slides.length;
-  slides[currentIndex].style.display = 'block';
-});
-
-document.getElementById('prev').addEventListener('click', () => {
-  slides[currentIndex].style.display = 'none';
-  currentIndex = (currentIndex - 1 + slides.length) % slides.length;
-  slides[currentIndex].style.display = 'block';
-});
