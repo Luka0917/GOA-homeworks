@@ -24,18 +24,18 @@ const titles = [
 ];
 
 const photos = [
-    "/group 34/level 90/classwork/photos/movie-1.jpg",
-    "/group 34/level 90/classwork/photos/movie-2.jpg",
-    "/group 34/level 90/classwork/photos/movie-3.jpg",
-    "/group 34/level 90/classwork/photos/movie-4.jpg",
-    "/group 34/level 90/classwork/photos/movie-5.jpg",
-    "/group 34/level 90/classwork/photos/movie-6.jpg",
-    "/group 34/level 90/classwork/photos/movie-7.jpg",
-    "/group 34/level 90/classwork/photos/movie-8.jpg",
-    "/group 34/level 90/classwork/photos/movie-9.jpg",
-    "/group 34/level 90/classwork/photos/movie-10.jpg",
-    "/group 34/level 90/classwork/photos/movie-11.jpg",
-    "/group 34/level 90/classwork/photos/movie-12.jpg"
+    "/group 34/level 090/classwork/photos/movie-1.jpg",
+    "/group 34/level 090/classwork/photos/movie-2.jpg",
+    "/group 34/level 090/classwork/photos/movie-3.jpg",
+    "/group 34/level 090/classwork/photos/movie-4.jpg",
+    "/group 34/level 090/classwork/photos/movie-5.jpg",
+    "/group 34/level 090/classwork/photos/movie-6.jpg",
+    "/group 34/level 090/classwork/photos/movie-7.jpg",
+    "/group 34/level 090/classwork/photos/movie-8.jpg",
+    "/group 34/level 090/classwork/photos/movie-9.jpg",
+    "/group 34/level 090/classwork/photos/movie-10.jpg",
+    "/group 34/level 090/classwork/photos/movie-11.jpg",
+    "/group 34/level 090/classwork/photos/movie-12.jpg"
 ];
 
 ratings = [
