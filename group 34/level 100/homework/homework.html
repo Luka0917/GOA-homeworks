@@ -1,27 +1,24 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <style>
-        body {
+        body{
             font-family: Arial, Helvetica, sans-serif;
             text-align: center;
             margin: 0;
             padding: 20px;
         }
-
-        button {
+        button{
             cursor: pointer;
         }
-
-        ul {
+        ul{
             list-style-type: none;
             padding: 0;
         }
-        li {
+        li{
             padding: 5px 10px;
             margin: 5px 0;
             background-color: #f4f4f4;
@@ -30,9 +27,9 @@
             justify-content: space-between;
             align-items: center;
         }
+
     </style>
 </head>
-
 <body>
     <h1>Simple to Do</h1>
     <input type="text" id="taskInput" placeholder="Add a new task">
@@ -46,42 +43,45 @@
         const taskList = document.getElementById('taskList');
         const clearAllBtn = document.getElementById('clearAllBtn');
 
-        window.addEventListener('load', loadTask);
+        window.addEventListener('load', loadTasks);
 
-        addTaskBtn.addEventListener('click', addTask);
+        addTaskBtn.addEventListener('click', () => {
+            const task = taskInput.value.trim();
+            if(task){
+                addTask(task);
+                saveTasks();
+            };
+        });
 
-        clearAllBtn.addEventListener('click', () => {
-            localStorage.clear();
-            loadTask();
-        })
+        taskList.addEventListener('click', (e) => {
+            if(e.target.tagName === "BUTTON"){
+                const li = e.target.parentElement;
+                taskList.removeChild(li);
+                saveTasks();
+            };
+        });
 
-        function saveTasks() {
-            let tasks = [];
-            for (let i = 0; i < document.querySelectorAll('li').length; i++) {
-                tasks.push(document.querySelectorAll('li')[i].textContent)
-            }
-            localStorage.setItem("tasks", JSON.stringify(tasks))
-        }
-
-        function addTask(task) {
-            let li = document.createElement('li');
-            let btn = document.createElement('button');
-            if (task) {
-                li.textContent = task;
-            } else {
-                li.textContent = taskInput.value;
-            }
-            btn.textContent = 'Remove';
-            li.appendChild(btn);
+        function addTask(task){
+            const li = document.createElement('li');
+            li.textContent = task;
+            const removeBtn = document.createElement('button');
+            removeBtn.textContent = 'Remove';
+            li.appendChild(removeBtn);
             taskList.appendChild(li);
-            saveTasks();
-        }
-        function loadTask() {
-            let tasks = JSON.parse(localStorage.getItem("tasks"));
-            for (let i = 0; i < tasks.length; i++) {
-                addTask(tasks[i]);
-            }
-        }
+        };
+
+        function saveTasks(){
+            const tasks = [];
+            taskList.querySelectorAll('li').forEach(li => {
+                tasks.push(li.firstChild.textContent);
+            });
+            localStorage.setItem('tasks', JSON.stringify(tasks));
+        }; 
+
+        function loadTasks(){
+            const tasks = JSON.parse(localStorage.getItem('tasks')) || [];
+            tasks.forEach(task => {addTask(task)});
+        };
     </script>
 </body>
 </html>
