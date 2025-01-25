@@ -1,10 +1,9 @@
-const obj = [
-    {name: 'lasha', age: 30},
-    {name: 'merabi', age: 15}
-];
+function objArr(arr){
+    for(let i of arr){
+        for(let x in i){
+            console.log(`${x}: ${i[x]}`);
+        };
+    };
+};
 
-for(let i = 0; i < obj.length; i++){
-    for(let key in obj[i]){
-        console.log(`${key}: ${obj[i][key]}`);
-    }
-}
+objArr([{name: 'lasha', age: 30}, {name: 'merabi', age: 15}]);
