@@ -1,0 +1,29 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    display: flex;
+    justify-content: center;
+}
+#name, #name-label, #sbmt{
+    margin-top: 100px;
+    margin-left: 5px;
+}
+#main{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    margin-top: 100px;
+}
+#form-2{
+    margin-top: 20px;
+}
+h3{
+    margin-top: 15px;
+}
+#form-3{
+    margin-top: 40px;
+}

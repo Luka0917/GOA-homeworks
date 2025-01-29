@@ -8,7 +8,7 @@ class books{
         return `"${this.name}" was written by ${this.author} and contains ${this.pages} pages`;
     };
     reading(){
-        return `I started reading "${this.name}" by ${this.author}`
+        return `I started reading "${this.name}" by ${this.author}`;
     };
     pagesRead(readPages){
         return `I started ${this.pages} pages thick book, and i have already read ${readPages} pages`;
@@ -39,17 +39,34 @@ class fantasy extends books{
         this.magic = magic;
     };
     get bookText(){
-        return `${super.bookText} and there are ${this.magicalCreatures}`
-    }
+        return `${super.bookText} and there are ${this.magicalCreatures}`;
+    };
     reading(){
-        return `${super.reading()} and i already love this book`;
+        return `I love reading "${this.name}" by ${this.author} because of ${this.magicalCreatures}`;
     };
     magicText(){
         let haveMagic = '';
         if(this.magic === true){
             haveMagic = ' and people use magic';
         };
-        return `In ${this.name} there are ${this.magicalCreatures}${haveMagic}`;
+        return `In "${this.name}" there are ${this.magicalCreatures}${haveMagic}`;
+    };
+};
+
+class detective extends books{
+    constructor(name, author, pages, story, detectiveName){
+        super(name, author, pages);
+        this.story = story;
+        this.detectiveName = detectiveName;
+    };
+    get bookText(){
+        return `${super.reading()} where detective named ${this.detectiveName} who investigates ${this.story}`;
+    };
+    reading(){
+        return `I started reading "${this.name}" by ${this.author} a book about ${this.story} and it has already gotten me interested`;
+    };
+    detectiveText(){
+        return `"${this.name}" is about ${this.story} where detective is ${this.detectiveName}`;
     };
 };
 
@@ -69,3 +86,9 @@ console.log(new fantasy('Eragon', 'Christopher Paolini', 509, 'dragons', true).b
 console.log(new fantasy('The Hobbit', 'J.R.R. Tolkien', 310, 'dragons', false).reading());
 console.log(new fantasy('Eragon', 'Christopher Paolini', 509, 'dragons', true).magicText());
 console.log(new fantasy('The Hobbit', 'J.R.R. Tolkien', 310, 'dragons', false).magicText());
+
+console.log("");
+
+console.log(new detective('The ABC Murders', 'Agatha Christie', 256, 'murder', 'Hercule Poirot').bookText);
+console.log(new detective('The ABC Murders', 'Agatha Christie', 256, 'murder', 'Hercule Poirot').reading());
+console.log(new detective('The ABC Murders', 'Agatha Christie', 256, 'murder', 'Hercule Poirot').detectiveText());
