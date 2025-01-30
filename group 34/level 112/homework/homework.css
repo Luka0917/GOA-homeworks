@@ -1,0 +1,28 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+#main{
+    display: grid;
+    grid-template-columns: 250px 250px 250px;
+    grid-template-rows: 375px 375px 375px;
+    gap: 50px;
+    width: 856px;
+    height: 806px;
+}
+.books{
+    border: 1px solid #000;
+    border-radius: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 20px;
+}
