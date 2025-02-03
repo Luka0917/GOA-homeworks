@@ -22,26 +22,28 @@ mainBtn.addEventListener("click", function(){
     const dec = document.getElementById("dec");
     const res = document.getElementById("res");
 
-    let count = 0;
-    inc.addEventListener("click", function(){
-        count++;
-        p.textContent = count;
-        if(count > 0){
-            main[0].style.backgroundColor = "green";
-        }
-    })
-    dec.addEventListener("click", function(){
-        count--;
-        p.textContent = count;
-        if(count < 0){
-            main[0].style.backgroundColor = "red";
-        }
-    })
-    res.addEventListener("click", function(){
-        count = 0;
-        p.textContent = count;
-        if(count === 0){
-            main[0].style.backgroundColor = "#81BFDA";
-        }
-    })
+    for(let i = 0; i < mainDiv.length; i++){
+        let count = 0;
+        inc.addEventListener("click", function(){
+            count++;
+            p.textContent = count;
+            if(count > 0){
+                main[i].style.backgroundColor = "green";
+            }
+        })
+        dec.addEventListener("click", function(){
+            count--;
+            p.textContent = count;
+            if(count < 0){
+                main[i].style.backgroundColor = "red";
+            }
+        })
+        res.addEventListener("click", function(){
+            count = 0;
+            p.textContent = count;
+            if(count === 0){
+                main[i].style.backgroundColor = "#81BFDA";
+            }
+        })
+    }
 })

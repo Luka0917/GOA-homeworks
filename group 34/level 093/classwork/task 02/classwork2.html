@@ -4,6 +4,60 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Classwork 2</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body{
+            background-color: #121212;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+        #main{
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            border: 2px solid #fff;
+            border-radius: 12px;
+            padding: 50px;
+            background-color: #81BFDA;
+        }
+        p{
+            font-size: 50px;
+            color: #fff;
+        }
+        #buttons{
+            display: flex;
+            gap: 10px;
+            margin-top: 10px;
+        }
+        button{
+            padding: 5px;
+            font-size: 15px;
+            font-weight: 600;
+            border: none;
+            border-radius: 5px;
+            background-color: #fff;
+        }
+        button:hover{
+            background-color: #F4F6FF;
+        }
+        #btns{
+            display: flex;
+            gap: 5px;
+            margin-top: 10px;
+        }
+        input{
+            border-radius: 5px;
+            border: 1px solid #fff;
+            padding: 2px;
+        }
+    </style>
 </head>
 <body>
     <div id="main">
@@ -11,10 +65,41 @@
         <form>
             <input type="number" placeholder="Enter number" required>
         </form>
-        <button id="inc">Increase</button>
-        <button id="dec">Decrease</button>
-        <button id="res">Reset</button>
+        <div id="btns">
+            <button id="inc">Increase</button>
+            <button id="dec">Decrease</button>
+            <button id="res">Reset</button>
+        </div>
     </div>
-    <script src="classwork2.js"></script>
+    <script>
+        const main = document.getElementById("main");
+        const p = document.querySelector("p");
+        const input = document.querySelector("input");
+        const inc = document.getElementById("inc");
+        const dec = document.getElementById("dec");
+        const res = document.getElementById("res");
+
+        let count = 0;
+        input.addEventListener("input", function(){
+            if(input.value > 100){
+                alert("you can not add number over 100!")
+            };
+        });
+        inc.addEventListener("click", function(){
+            count += Number(input.value);
+            p.textContent = count;
+        });
+        dec.addEventListener("click", function(){
+            count -= Number(input.value);
+            p.textContent = count;
+        });
+        res.addEventListener("click", function(){
+            if(p === 0){
+                alert("you can not reset!");
+            };
+            count = 0;
+            p.textContent = count;
+        });
+    </script>
 </body>
 </html>

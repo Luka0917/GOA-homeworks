@@ -4,7 +4,50 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Classwork</title>
-    <link rel="stylesheet" href="classwork1.css">
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body{
+            background-color: #121212;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+        #main{
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            border: 2px solid #fff;
+            border-radius: 12px;
+            padding: 50px;
+            background-color: #81BFDA;
+        }
+        p{
+            font-size: 50px;
+            color: #fff;
+        }
+        #buttons{
+            display: flex;
+            gap: 10px;
+            margin-top: 10px;
+        }
+        button{
+            padding: 5px;
+            font-size: 15px;
+            font-weight: 600;
+            border: none;
+            border-radius: 5px;
+            background-color: #fff;
+        }
+        button:hover{
+            background-color: #F4F6FF;
+        }
+    </style>
 </head>
 <body>
     <div id="main">
@@ -15,6 +58,35 @@
             <button id="res">Reset</button>
         </div>
     </div>
-    <script src="classwork1.js"></script>
+    <script>
+        const main = document.getElementById("main");
+        const p = document.querySelector("p");
+        const inc = document.getElementById("inc");
+        const dec = document.getElementById("dec");
+        const res = document.getElementById("res");
+
+        let count = 0;
+        inc.addEventListener("click", function(){
+            count++;
+            p.textContent = count;
+            if(count > 0){
+                main.style.backgroundColor = "green";
+            };
+        });
+        dec.addEventListener("click", function(){
+            count--;
+            p.textContent = count;
+            if(count < 0){
+                main.style.backgroundColor = "red";
+            };
+        });
+        res.addEventListener("click", function(){
+            count = 0;
+            p.textContent = count;
+            if(count === 0){
+                main.style.backgroundColor = "#81BFDA";
+            };
+        });
+    </script>
 </body>
 </html>
