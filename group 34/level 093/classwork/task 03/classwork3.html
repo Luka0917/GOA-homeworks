@@ -4,12 +4,108 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Classwork 3</title>
-    <link rel="stylesheet" href="classwork3.css">
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body{
+            background-color: #121212;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+        .main{
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            border: 2px solid #fff;
+            border-radius: 12px;
+            padding: 50px;
+            background-color: #81BFDA;
+        }
+        p{
+            font-size: 50px;
+            color: #fff;
+        }
+        #buttons{
+            display: flex;
+            gap: 10px;
+            margin-top: 10px;
+        }
+        button{
+            padding: 5px;
+            font-size: 15px;
+            font-weight: 600;
+            border: none;
+            border-radius: 5px;
+            background-color: #fff;
+        }
+        button:hover{
+            background-color: #F4F6FF;
+        }
+        #main-div{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            gap: 20px;
+        }
+    </style>
 </head>
 <body>
     <div id="main-div">
         <button id="main-btn">Counter</button>
     </div>
-    <script src="classwork3.js"></script>
+    <script>
+        const mainDiv = document.getElementById("main-div");
+        const mainBtn = document.getElementById("main-btn");
+
+        mainBtn.addEventListener("click", function(){
+            const newDiv = document.createElement('div');
+            newDiv.className = 'main';
+            newDiv.innerHTML = `
+                <p>0</p>
+                <div id="buttons">
+                    <button class="inc">Increase</button>
+                    <button class="dec">Decrease</button>
+                    <button class="res">Reset</button>
+                </div>
+            `;
+            mainDiv.appendChild(newDiv);
+
+            const p = newDiv.querySelector('p');
+            const inc = newDiv.querySelector('.inc');
+            const dec = newDiv.querySelector('.dec');
+            const res = newDiv.querySelector('.res');
+
+            let count = 0;
+
+            inc.addEventListener("click", function(){
+                count++;
+                p.textContent = count;
+                if(count > 0){
+                    newDiv.style.backgroundColor = "green";
+                };
+            });
+
+            dec.addEventListener("click", function(){
+                count--;
+                p.textContent = count;
+                if(count < 0){
+                    newDiv.style.backgroundColor = "red";
+                };
+            });
+
+            res.addEventListener("click", function(){
+                count = 0;
+                p.textContent = count;
+                newDiv.style.backgroundColor = "#81BFDA";
+            });
+        });
+    </script>
 </body>
 </html>
