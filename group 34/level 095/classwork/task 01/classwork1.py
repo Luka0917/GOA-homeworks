@@ -1,61 +1,19 @@
-# 1) შექმენით ფუნქცია რომელსაც მატრიცა (2დ მასივი) X-ების O-ების და ცარიელი სტრინგების. ფუნქციამ უნდა გამოთვალოს ფრეა, თუ რომელამა მოთამაშემ მოიგო თამაში. ( ინფუთი ყოველთვის ვალიდური იქნება )
+def check_winner(board):
+    lines = board + [list(col) for col in zip(*board)] + [[board[i][i] for i in range(3)]] + [[board[i][2-i] for i in range(3)]]
 
-# def who_won(array):
-#     for i in array:
-#         for m in i:
-#             pass
+    if ['X', 'X', 'X'] in lines:
+        return "X wins"
+    elif ['O', 'O', 'O'] in lines:
+        return "O wins"
+    elif all(cell in ('X', 'O') for row in board for cell in row):
+        return "Draw"
+    else:
+        return "game is not finished."
 
+board = [
+    ['X', 'O', 'O'], 
+    ['X', 'X', 'O'],
+    ['O', 'O', 'X']
+    ]
 
-# [ 
-#     ['X', "O", ""], 
-#     ["X", "X", "O"], 
-#     ["', "", ""] 
-# ]
-
-# [
-#  ['O', 'X', 'O'], 
-#  ['O', 'X', 'X'], 
-#  ['X', 'O', 'X']
-# ]
-
-# [
-#  ['X', 'O', 'X'], 
-#  ['', 'O', ''], 
-#  ['', 'O', 'X']
-# ]
-
-
-
-# ex = [
-#  ['X', 'O', 'X'], 
-#  ['X', 'O', 'X'], 
-#  ['X', 'O', 'X']
-# ]
-
-# column_1 = []
-# column_2 = []
-# column_3 = []
-
-# for j in ex:
-#     if j[0] == "X":
-#         column_1.append(j[0])
-#     if j[1] == "X":
-#         column_2.append(j[1])
-#     if j[2] == "X":
-#         column_3.append(j[2])
-
-#     if j[0] == "O":
-#         column_1.append(j[0])
-#     if j[1] == "O":
-#         column_2.append(j[1])
-#     if j[2] == "O":
-#         column_3.append(j[2])    
-
-# if len(column_1) == 3 or len(column_2) == 3 or len(column_3) == 3:
-#     print("X won!")
-
-
-
-
-
-# 5) შევქმნათ ფუნქცია რომელიც დააბრუნებს პირველ არა-განმეორებად ასოს რომელიც შეხვდება. ( სირთულე 4/10 )
+print(check_winner(board))
