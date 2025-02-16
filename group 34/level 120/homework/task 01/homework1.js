@@ -1,9 +1,9 @@
 function func(set1, set2){
     for(let i of set1){
-        if(set2.has(i)){
-            return true;
+        if(!set2.has(i)){
+            return false;
         };
-        return false;
+        return true;
     };
 };
 
