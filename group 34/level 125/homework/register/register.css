@@ -1,0 +1,49 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    height: 100vh;
+}
+#main{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    border: 2px solid #000;
+    border-radius: 30px;
+    padding: 50px 30px;
+}
+form{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+}
+#email-label, #pass-label, #re-pass-label, button{
+    margin-top: 15px;
+}
+b{
+    margin-bottom: 30px;
+    font-size: 30px;
+}
+p{
+    margin-top: 30px;
+}
+a{
+    color: purple;
+    text-decoration: none;
+}
+input, button{
+    border: 1px solid #000;
+    border-radius: 5px;
+    padding: 5px 10px;
+    background: transparent;
+}
+button:hover{
+    cursor: pointer;
+}
