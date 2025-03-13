@@ -5,7 +5,6 @@ async function func(){
             throw new Error('Error!');
         }
         let data = await fetchedData.json();
-        console.log(data); // for debuging
         const name = document.getElementsByClassName('name');
         const userName = document.getElementsByClassName('username');
         const email = document.getElementsByClassName('email');
