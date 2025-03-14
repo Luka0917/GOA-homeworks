@@ -5,6 +5,6 @@ fetch('https://fakestoreapi.com/products')
         for(let i = 0; i < msg_2.length; i++){
             let img = document.createElement('img');
             img.src = msg_2[i].image;
-            document.querySelector('body').appendChild(img)
-        }
+            document.querySelector('body').appendChild(img);
+        };
     });
