@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Homework</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            height: 100vh;
+            gap: 20px;
+        }
+        form{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            gap: 10px;
+            font-size: 20px;
+        }
+        div{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 5px;
+        }
+        button:hover{
+            cursor: pointer;
+        }
+        img{
+            width: 300px;
+            height: 450px;
+            opacity: 0;
+        }
+    </style>
+</head>
+<body>
+    <form>
+        <div>
+            <input type="radio" name="animal" id="cat">
+            <label for="cat">Cat</label>
+        </div>
+
+        <div>
+            <input type="radio" name="animal" id="dog">
+            <label for="dog">Dog</label>
+        </div>
+
+        <div>
+            <input type="radio" name="animal" id="fox">
+            <label for="fox">Fox</label>
+        </div>
+
+        <button>Submit</button>
+    </form>
+    <img src="">
+    <script src="homework.js"></script>
+</body>
+</html>
