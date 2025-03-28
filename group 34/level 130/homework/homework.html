@@ -7,7 +7,24 @@
     <link rel="stylesheet" href="homework.css">
 </head>
 <body>
-    
+    <div>
+        <form>
+            <label for="category">Joke Category</label>
+            <select name="category" id="category">
+                <option value="Programming">Programming</option>
+                <option value="Pun">Pun</option>
+                <option value="Misc">Misc</option>
+                <option value="Christmas">Christmas</option>
+                <option value="Spooky">Spooky</option>
+            </select>
+            <button>Get Joke</button>
+        </form>
+        <button id="advise-btn">Get Advise</button>
+    </div>
+    <div id="result">
+        <div id="joke"></div>
+        <p id="advice"></p>
+    </div>
     <script src="homework.js"></script>
 </body>
 </html>
