@@ -1,10 +1,5 @@
+const total = document.getElementById('total');
 const divs = document.getElementsByClassName('product-divs');
-// const form = document.querySelector('form');
-
-// form.addEventListener('submit', e => {
-//     e.preventDefault();
-//     const idInput = form.querySelector('input');
-// })
 
 const products = [
     {"id": 1, "name": "Wireless Mouse", "price": 25.99},
@@ -34,17 +29,30 @@ for(let i = 0; i < divs.length; i++){
         <p class="names">${products[i].name}</p> 
         <b class="prices">${products[i].price}</b>
         <p class="ids">${products[i].id}</p>
+        <button class="add-to-cart-btns">Add To Cart</button>
     `;
-}
-
-function getProductById(id){
-    console.log(products.find(product => product.id === id));
 };
-getProductById(2);
 
-function renderProducts(){
-    products.forEach(product => {
-        console.log(product);
+const addToCartBtns = document.getElementsByClassName('add-to-cart-btns');
+
+let totalPrice = 0;
+for(let x = 0; x < addToCartBtns.length; x++){
+    addToCartBtns[x].addEventListener('click', () => {
+        totalPrice += products[x].price;
+        total.innerHTML = `$${totalPrice.toFixed(2)}`;
     });
 };
-renderProducts();
+
+const ids = document.getElementsByClassName('ids');
+const form = document.querySelector('form');
+const input = form.id;
+form.addEventListener('input', e => {
+    e.preventDefault();
+    for(let j = 0; j < ids.length; j++){
+        if(input.value === ids[j].textContent || input.value === ''){
+            divs[j].style.opacity = '1';
+        }else{
+            divs[j].style.opacity = '0';
+        };
+    };
+});
