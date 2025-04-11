@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Homework</title>
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+</head>
+<body class="flex justify-center items-center gap-[100px] h-screen">
+    <div class="grid grid-cols-4 grid-rows-2 gap-[50px]">
+        <div class="flex justify-center items-center flex-col border border-black-500 rounded-[32px] p-[20px]">
+            <img src="./photos/desert1.jpg" class="w-[200px] h-[200px] rounded-[12px]">
+            <p class="text-[18px]">Chocolate Cake</p>
+            <p class="font-medium text-[20px] price">$5.00</p>
+            <button class="border border-black-500 rounded-[7px] px-[5px] py-[3px] bg-black text-white hover:bg-white hover:text-black cursor-pointer mt-[10px] transition-colors duration-300 cart-btn"><i class="fa-solid fa-cart-shopping"></i> Add to cart</button>
+        </div>
+        <div class="flex justify-center items-center flex-col border border-black-500 rounded-[32px] p-[20px]">
+            <img src="./photos/desert2.jpg" class="w-[200px] h-[200px] rounded-[12px]">
+            <p class="text-[18px]">Cheesecake</p>
+            <p class="font-medium text-[20px] price">$7.00</p>
+            <button class="border border-black-500 rounded-[7px] px-[5px] py-[3px] bg-black text-white hover:bg-white hover:text-black cursor-pointer mt-[10px] transition-colors duration-300 cart-btn"><i class="fa-solid fa-cart-shopping"></i> Add to cart</button>
+        </div>
+        <div class="flex justify-center items-center flex-col border border-black-500 rounded-[32px] p-[20px]">
+            <img src="./photos/desert3.jpg" class="w-[200px] h-[200px] rounded-[12px]">
+            <p class="text-[18px]">Tiramisu</p>
+            <p class="font-medium text-[20px] price">$6.00</p>
+            <button class="border border-black-500 rounded-[7px] px-[5px] py-[3px] bg-black text-white hover:bg-white hover:text-black cursor-pointer mt-[10px] transition-colors duration-300 cart-btn"><i class="fa-solid fa-cart-shopping"></i> Add to cart</button>
+        </div>
+        <div class="flex justify-center items-center flex-col border border-black-500 rounded-[32px] p-[20px]">
+            <img src="./photos/desert4.jpg" class="w-[200px] h-[200px] rounded-[12px]">
+            <p class="text-[18px]">Apple Pie</p>
+            <p class="font-medium text-[20px] price">$4.00</p>
+            <button class="border border-black-500 rounded-[7px] px-[5px] py-[3px] bg-black text-white hover:bg-white hover:text-black cursor-pointer mt-[10px] transition-colors duration-300 cart-btn"><i class="fa-solid fa-cart-shopping"></i> Add to cart</button>
+        </div>
+        <div class="flex justify-center items-center flex-col border border-black-500 rounded-[32px] p-[20px]">
+            <img src="./photos/desert5.jpg" class="w-[200px] h-[200px] rounded-[12px]">
+            <p class="text-[18px]">Baklava</p>
+            <p class="font-medium text-[20px] price">$4.00</p>
+            <button class="border border-black-500 rounded-[7px] px-[5px] py-[3px] bg-black text-white hover:bg-white hover:text-black cursor-pointer mt-[10px] transition-colors duration-300 cart-btn"><i class="fa-solid fa-cart-shopping"></i> Add to cart</button>
+        </div>
+        <div class="flex justify-center items-center flex-col border border-black-500 rounded-[32px] p-[20px]">
+            <img src="./photos/desert6.jpg" class="w-[200px] h-[200px] rounded-[12px]">
+            <p class="text-[18px]">Macarons</p>
+            <p class="font-medium text-[20px] price">$2.00</p>
+            <button class="border border-black-500 rounded-[7px] px-[5px] py-[3px] bg-black text-white hover:bg-white hover:text-black cursor-pointer mt-[10px] transition-colors duration-300 cart-btn"><i class="fa-solid fa-cart-shopping"></i> Add to cart</button>
+        </div>
+        <div class="flex justify-center items-center flex-col border border-black-500 rounded-[32px] p-[20px]">
+            <img src="./photos/desert7.jpg" class="w-[200px] h-[200px] rounded-[12px]">
+            <p class="text-[18px]">Creme Brûlée</p>
+            <p class="font-medium text-[20px] price">$8.00</p>
+            <button class="border border-black-500 rounded-[7px] px-[5px] py-[3px] bg-black text-white hover:bg-white hover:text-black cursor-pointer mt-[10px] transition-colors duration-300 cart-btn"><i class="fa-solid fa-cart-shopping"></i> Add to cart</button>
+        </div>
+        <div class="flex justify-center items-center flex-col border border-black-500 rounded-[32px] p-[20px]">
+            <img src="./photos/desert8.jpg" class="w-[200px] h-[200px] rounded-[12px]">
+            <p class="text-[18px]">Lemon Meringue Pie</p>
+            <p class="font-medium text-[20px] price">$5.00</p>
+            <button class="border border-black-500 rounded-[7px] px-[5px] py-[3px] bg-black text-white hover:bg-white hover:text-black cursor-pointer mt-[10px] transition-colors duration-300 cart-btn"><i class="fa-solid fa-cart-shopping"></i> Add to cart</button>
+        </div>
+    </div>
+    <div>
+        <p class="text-[30px] font-semibold" id="sum">Total: $0.00</p>
+        <button class="border border-black-500 rounded-[7px] px-[10px] py-[5px] bg-black text-white hover:bg-white hover:text-black cursor-pointer mt-[10px] transition-colors duration-300 cart-btn" id="order-btn">Confirm Order</button>
+    </div>
+    <script src="homework.js"></script>
+</body>
+</html>
