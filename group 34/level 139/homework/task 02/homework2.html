@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Homework 2</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+</head>
+<body class="flex justify-center items-center flex-col gap-[20px] h-screen bg-[#f0f0f0]">
+    <div class="flex justify-center items-center flex-col bg-white rounded-tl-[24px] rounded-tr-[24px] rounded-br-[200px] rounded-bl-[24px] p-[50px]">
+        <div class="flex justify-center items-center gap-[50px] mr-[75px]">
+            <div class="flex justify-center flex-col">
+                <label for="day" class="text-[20px] font-[500]">DAY</label>
+                <input type="number" id="day" placeholder="DD" min="1" max="31" class="border-2 border-[#e8e8e8] rounded-[12px] w-[120px] py-[20px] text-center placeholder:text-[22px] placeholder:font-[800] focus:outline-none" required>
+            </div>
+            <div class="flex justify-center flex-col">
+                <label for="month" class="text-[20px] font-[500]">MONTH</label>
+                <input type="number" id="month" placeholder="MM" min="1" max="12" class="border-2 border-[#e8e8e8] rounded-[12px] w-[120px] py-[20px] text-center placeholder:text-[22px] placeholder:font-[800] focus:outline-none" required>
+            </div>
+            <div class="flex justify-center flex-col">
+                <label for="year" class="text-[20px] font-[500]">YEAR</label>
+                <input type="number" id="year" placeholder="YYYY" min="1" max="2025" class="border-2 border-[#e8e8e8] rounded-[12px] w-[120px] py-[20px] text-center placeholder:text-[22px] placeholder:font-[800] focus:outline-none" required>
+            </div>
+        </div>
+        <div class="flex justify-center items-center text-[#ededed]">
+            <p>————————————————————————————————</p>
+            <button id="btn" class="w-[70px] h-[70px] bg-[#844dff] text-white text-[40px] rounded-[50%] flex justify-center items-center cursor-pointer hover:bg-[#7436ff] transition-colors duration-300"><i class="fa-solid fa-arrow-down"></i></button>
+        </div>
+        <div>
+            <p class="text-[100px] font-[900]"><b class="text-[#844dff]" id="year-b">−−</b> years</p>
+            <p class="text-[100px] font-[900]"><b class="text-[#844dff]" id="month-b">−−</b> month</p>
+            <p class="text-[100px] font-[900]"><b class="text-[#844dff]" id="day-b">−−</b> days</p>
+        </div>
+    </div>
+    <p id="error-p" class="text-[20px] text-red-500"></p>
+    <script src="homework2.js"></script>
+</body>
+</html>
