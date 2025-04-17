@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Homework 2</title>
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+</head>
+<body>
+    <div class="flex justify-center items-center flex-col gap-[100px] py-[10px]">
+        <nav class="flex justify-between items-center w-[400px]">
+            <a href="about.html" class="text-[20px] font-[500] cursor-pointer hover:underline">About</a>
+            <a href="contact.html" class="text-[20px] font-[500] cursor-pointer hover:underline">Contact</a>
+            <a href="/group 34/level 140/homework/task 02/register/register.html" class="text-[20px] font-[500] cursor-pointer hover:underline">Register</a>
+            <a href="/group 34/level 140/homework/task 02/homework2.html" class="text-[20px] font-[500] cursor-pointer hover:underline">Home</a>
+        </nav>
+        <div class="flex justify-center items-center flex-col w-[350px] h-[525px] border-2 border-black rounded-[24px]">
+            <p class="text-[40px] font-[600]">Login</p>
+            <form class="flex justify-evenly flex-col">
+                <label for="username" id="username-lab" class="mt-[30px]">Username</label>
+                <input type="text" name="username" id="username" class="border-2 border-black rounded-[5px] focus:outline-none">
+    
+                <label for="pass" id="pass-lab" class="mt-[10px]">Password</label>
+                <input type="password" name="pass" id="pass" class="border-2 border-black rounded-[5px] focus:outline-none">
+    
+                <button class="border-2 border-black rounded-[5px] mt-[20px] bg-black text-white cursor-pointer hover:bg-white hover:text-black transition-bg duration-300">Login</button>
+            </form>
+            <p id="error" class="text-red-500 mt-[20px]"></p>
+        </div>
+    </div>
+    <script src="login.js"></script>
+</body>
+</html>
