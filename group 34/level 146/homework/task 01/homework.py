@@ -5,4 +5,40 @@
 def get_ascii(ch):
     return ord(ch)
 
-#
+# https://www.codewars.com/kata/53f0f358b9cb376eca001079/train/python
+
+class Ball(object):
+    def __init__(self, ball_type = 'regular'):
+        self.ball_type = ball_type
+
+# https://www.codewars.com/kata/5803956ddb07c5c74200144e/train/python
+
+def dating_range(age):
+    if age <= 14:
+        min = int(age - 0.10 * age)
+        max = int(age + 0.10 * age)
+    else:
+        min = age // 2 + 7
+        max = 2 * (age - 7)
+    return f'{min}-{max}'
+
+# https://www.codewars.com/kata/5769b3802ae6f8e4890009d2/train/python
+
+def remove_every_other(my_list):
+    result = []
+    for i in range(len(my_list)):
+        if i % 2 == 0:
+            result.append(my_list[i])
+    return result
+
+# https://www.codewars.com/kata/56f69d9f9400f508fb000ba7/train/python
+
+def monkey_count(n):
+    return [i for i in range(1, n+1)]
+
+# 7kyu
+
+# https://www.codewars.com/kata/5656b6906de340bd1b0000ac/train/python
+
+def longest(a1, a2):
+    return ''.join(sorted(set(a1 + a2)))
