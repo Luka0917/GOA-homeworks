@@ -42,3 +42,16 @@ def monkey_count(n):
 
 def longest(a1, a2):
     return ''.join(sorted(set(a1 + a2)))
+
+# https://www.codewars.com/kata/58b8c94b7df3f116eb00005b/train/python
+
+def reverse_letter(st):
+    return ''.join([i for i in st if i.isalpha()])[::-1]
+
+# https://www.codewars.com/kata/55de6173a8fbe814ee000061/train/python
+
+def unused_digits(*numbers):
+    used = set(str(x) for i in numbers for x in str(i))
+    all_digits = set('0123456789')
+    unused = sorted(all_digits - used)
+    return ''.join(unused)
