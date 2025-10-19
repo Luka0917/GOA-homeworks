@@ -1,0 +1,24 @@
+import React from "react";
+
+export default class Task02ErrorBoundaryB extends React.Component{
+    constructor(props){
+        super(props);
+        this.state = {hasError: false, error: null};
+    };
+    static getDerivedStateFromError(error){
+        return {hasError: true, error};
+    };
+    componentDidCatch(error, info){
+        console.error(error, info);
+    };
+    render(){
+        if(this.state.hasError){
+            return (
+                <div>
+                    <p className="text-[20px] font-[500] text-red-500">Error! (B)</p>
+                </div>
+            )
+        }
+        return this.props.children;
+    };
+};

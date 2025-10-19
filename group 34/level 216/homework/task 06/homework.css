@@ -1,0 +1,88 @@
+@import url('https://fonts.googleapis.com/css2?family=DM+Serif+Text:ital@0;1&family=Figtree:ital,wght@0,300..900;1,300..900&family=Fleur+De+Leah&family=Kings&family=Noto+Sans:ital,wght@0,100..900;1,100..900&family=Nunito+Sans:ital,opsz,wght@0,6..12,200..1000;1,6..12,200..1000&family=Roboto:ital,wght@0,100..900;1,100..900&family=Tiny5&family=Zain:ital,wght@0,200;0,300;0,400;0,700;0,800;0,900;1,300;1,400&display=swap');
+
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: Noto Sans;
+}
+body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    padding: 100px 0;
+}
+#main{
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    max-width: 900px;
+    margin: 20px auto;
+}
+#controls{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 15px;
+}
+input{
+    border: 1px solid black;
+    border-radius: 5px;
+    width: 150px;
+    padding: 7px 5px;
+}
+button{
+    border: 1px solid black;
+    border-radius: 5px;
+    padding: 7px 10px;
+    background-color: black;
+    color: white;
+    cursor: pointer;
+    transition: all 0.3s;
+}
+button:hover{
+    background-color: white;
+    color: black;
+}    
+.box{
+    width: 50px;
+    height: 50px;
+    margin: 5px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: gray;
+    border-radius: 9px;
+    font-weight: 600;
+    font-size: 17px;
+    transition: all 0.4s ease;
+}
+h2{
+    color: red;
+}
+.low{
+    background-color: red;
+    color: white;
+}
+.high{
+    background-color: blue;
+    color: white;
+}
+.mid{
+    background-color: purple;
+    color: white;
+}
+.found{
+    background-color: #0f0;
+    color: black;
+}
+#rules{
+    position: absolute;
+    top: 30px;
+    left: 30px;
+}
+#rules p{
+    font-size: 20px;
+    font-weight: 500;
+}

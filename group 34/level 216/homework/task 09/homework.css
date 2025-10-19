@@ -1,0 +1,53 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    padding: 100px 0;
+}
+input{
+    border: 1px solid black;
+    border-radius: 5px;
+    width: 150px;
+    padding: 7px 5px;
+}
+img{
+    width: 200px;
+}
+#main{
+    display: grid;
+    grid-template-columns: repeat(5, 300px);
+    grid-template-rows: repeat(4, 400px);
+    gap: 60px;
+    margin-top: 20px;
+}
+.product-div{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 10px;
+}
+.product-div p{
+    font-size: 30px;
+    font-weight: 600;
+    color: darkgreen;
+}
+button{
+    border: 1px solid black;
+    border-radius: 5px;
+    padding: 7px 10px;
+    background-color: black;
+    color: white;
+    cursor: pointer;
+    transition: all 0.3s;
+}
+button:hover{
+    background-color: white;
+    color: black;
+}

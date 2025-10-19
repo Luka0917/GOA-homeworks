@@ -1,0 +1,17 @@
+@import "tailwindcss";
+
+#main-1{
+    display: grid;
+    grid-template-columns: repeat(5, 250px);
+    grid-template-rows: repeat(2, 300px);
+    gap: 50px;
+    margin-top: 20px;
+}
+#main-2{
+    display: grid;
+    grid-template-columns: repeat(6, 250px);
+    grid-template-rows: repeat(17, 300px);
+    gap: 50px;
+    margin-top: 20px;
+    padding-bottom: 50px;
+}
