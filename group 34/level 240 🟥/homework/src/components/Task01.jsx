@@ -19,10 +19,10 @@ export default function Task01(){
                 placeholder="Enter Word" 
                 value={input} 
                 onChange={e => setInput(e.target.value)} 
-                className="border" 
+                className="border rounded-[7px] px-[5px] py-0.5 focus:outline-none" 
             />
-            <button onClick={() => addWord(input)}>Submit</button>
-            <ul>
+            <button onClick={() => addWord(input)} className="border border-black rounded-[7px] px-[5px] py-0.5 bg-black text-white cursor-pointer hover:bg-white hover:text-black transition duration-200 ml-[5px]">Submit</button>
+            <ul className="absolute ml-[5px]">
                 {wordsArr.map((el, i) => (
                     <li key={i}>{el}</li>
                 ))}

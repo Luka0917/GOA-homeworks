@@ -20,10 +20,25 @@ const themeChange = set => ({
 
 const shoppingCart = set => ({
     cart: [],
-    add: item => set(s => ({ cart: [...s.cart, item] })),
-    remove: index => set(s => ({ cart: s.cart.filter((_, i) => i !== index) })),
     priceCount: 0,
-    priceInc: index => set(s => ({ priceCount: s.priceCount += s.cart.filter((_, i) => index === i).price })) //! does not Work!
+    add: item => set(s => ({ cart: [...s.cart, item], priceCount: s.priceCount + item.price })),
+    remove: index => set(s => ({ cart: s.cart.filter((_, i) => i !== index), priceCount: s.priceCount - s.cart[index].price })),
+})
+
+const noteApp = set => ({
+    notes: [],
+    addNote: note => set(s => {
+        const date = new Date();
+        const month = date.getMonth() + 1;
+        const day = date.getDay();
+        const year = date.getFullYear();
+        const hour = date.getHours();
+        const minute = date.getMinutes();
+        return {
+            notes: [...s.notes, { note, date: `${month}/${day}/${year} --- ${hour}:${minute}` }]
+        }
+    }),
+    removeNote: index => set(s => ({ notes: s.notes.filter((_, i) => i !== index) }))
 })
 
 export const useStore = create(
@@ -32,7 +47,8 @@ export const useStore = create(
             ...words(set),
             ...counter(set),
             ...themeChange(set),
-            ...shoppingCart(set)
+            ...shoppingCart(set),
+            ...noteApp(set)
         })
     ), {name: 'data'}
 )

@@ -2,13 +2,12 @@ import { useShallow } from "zustand/react/shallow";
 import { useStore } from "../store"; 
 
 export default function Task04(){
-    const { cart, add, remove, priceCount, priceInc } = useStore(
+    const { cart, add, remove, priceCount } = useStore(
         useShallow(s => ({
             cart: s.cart,
             add: s.add,
             remove: s.remove,
-            priceCount: s.priceCount,
-            priceInc: s.priceInc
+            priceCount: s.priceCount
         }))
     )
 
@@ -29,13 +28,13 @@ export default function Task04(){
                             <p>{el.product}</p>
                             <p>{el.price}$</p>
                         </div>
-                        <button onClick={() => {add(el); priceInc(i)}}>Add To Cart</button>
+                        <button onClick={() => add(el)}>Add To Cart</button>
                     </div>
                 ))}
             </div>
             <div>
                 <p>Cart</p>
-                <p>Total: {priceCount}$</p>
+                <p>Total: {priceCount.toFixed(2)}$</p>
                 <div>
                     {cart.map((el, i) => (
                         <div key={i}>
