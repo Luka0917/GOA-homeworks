@@ -1,5 +1,6 @@
 import { useShallow } from "zustand/react/shallow";
-import { useStore } from "../store"; 
+import { useStore } from "../store";
+import { FaShoppingCart } from "react-icons/fa";
 
 export default function Task04(){
     const { cart, add, remove, priceCount } = useStore(
@@ -21,28 +22,30 @@ export default function Task04(){
 
     return (
         <div className="flex justify-center items-center gap-[100px]">
-            <div>
+            <div className="flex justify-center items-center flex-col gap-5">
                 {data.map((el, i) => (
-                    <div key={i} className="flex justify-center items-center">
+                    <div key={i} className="flex justify-between items-center w-[250px] border rounded-[17px] p-2.5">
                         <div className="flex justify-center items-center flex-col">
                             <p>{el.product}</p>
                             <p>{el.price}$</p>
                         </div>
-                        <button onClick={() => add(el)}>Add To Cart</button>
+                        <button onClick={() => add(el)} className="border border-black rounded-[7px] px-[5px] py-0.5 bg-black text-white cursor-pointer hover:bg-white hover:text-black transition duration-200">Add To Cart</button>
                     </div>
                 ))}
             </div>
             <div>
-                <p>Cart</p>
-                <p>Total: {priceCount.toFixed(2)}$</p>
-                <div>
+                <div className="flex justify-center items-center flex-col">
+                    <p className="text-[30px] font-semibold flex justify-center items-center gap-[5px]">Cart <FaShoppingCart /></p>
+                    <p className="text-[20px] font-medium">Total: <b className="text-green-700">{priceCount.toFixed(2)}$</b></p>
+                </div>
+                <div className="flex justify-center items-center flex-col gap-5 mt-5">
                     {cart.map((el, i) => (
-                        <div key={i}>
+                        <div key={i} className="flex justify-between items-center w-[250px] border rounded-[17px] p-2.5">
                             <div className="flex justify-center items-center flex-col">
                                 <p>{el.product}</p>
                                 <p>{el.price}$</p>
                             </div>
-                            <button onClick={() => remove(i)}>Remove From Cart</button>
+                            <button onClick={() => remove(i)} className="border border-black rounded-[7px] px-[5px] py-0.5 bg-black text-white cursor-pointer hover:bg-white hover:text-black transition duration-200">Remove From Cart</button>
                         </div>
                     ))}
                 </div>

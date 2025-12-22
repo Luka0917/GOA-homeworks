@@ -20,9 +20,9 @@ export default function Task05(){
                 placeholder="Enter Note"
                 value={input}
                 onChange={e => setInput(e.target.value)}
-                className="border"
+                className="border rounded-[7px] px-[5px] py-0.5 focus:outline-none"
             />
-            <button onClick={() => addNote(input)}>Submit</button>
+            <button onClick={() => addNote(input)} className="border border-black rounded-[7px] px-[5px] py-0.5 bg-black text-white cursor-pointer hover:bg-white hover:text-black transition duration-200 ml-[5px]">Submit</button>
             <ol>
                 {notes.map((el, i) => (
                     <li key={i}>{el.note} {el.date}</li>
