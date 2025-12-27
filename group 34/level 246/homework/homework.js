@@ -161,3 +161,40 @@ class LinkdeList {
         return result;
     }
 };
+
+
+// 83. Remove Duplicates from Sorted List
+// https://leetcode.com/problems/remove-duplicates-from-sorted-list/description/
+
+var deleteDuplicates = function(head){
+    let current = head;
+    while(current && current.next){
+        if(current.val === current.next.val) current.next = current.next.next;
+        else current = current.next;
+    }
+    return head
+};
+
+
+function deleteDuplicates2(list){
+    if(!list.head) return;
+    let current = list.head;
+    let i = 0;
+    while(current && current.next){
+        if(current.value === current.next.value) list.erase(i + 1);
+        else{
+            current = current.next;
+            i++;
+        }
+    }
+    return list.head;
+}
+
+let list = new LinkdeList();
+list.pushBack(1);
+list.pushBack(1);
+list.pushBack(2);
+list.pushBack(3);
+list.pushBack(3);
+deleteDuplicates2(list);
+console.log(list.toArray());
