@@ -10,5 +10,6 @@ app.use(express.json());
 app.use('/users', usersRouter);
 app.use('/posts', postRouter);
 app.use('/likes', likeRouter);
+app.use('/follow', followRoute);
 
 module.exports = app;
