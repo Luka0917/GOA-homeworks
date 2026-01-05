@@ -1,9 +1,9 @@
 const express = require('express');
 const likeRouter = express.Router();
 
-//^ GET --> /posts/:userName/:index/like
-//^ POST --> /posts/:id/:index/like
-//^ DELETE --> /posts/:id/:index/like
+//^ GET --> /:userName/:index
+//^ POST --> /:id/:index
+//^ DELETE --> /:id/:index
 
 const {
     getPost,
@@ -11,10 +11,10 @@ const {
     dislikePost
 } = require('../controllers/likeController.cjs');
 
-likeRouter.get('/:userName/:index/like', getPost);
+likeRouter.get('/:userName/:index', getPost);
 
-likeRouter.post('/:id/:index/like', likePost);
+likeRouter.post('/:id/:index', likePost);
 
-likeRouter.delete('/:id/:index/like', dislikePost);
+likeRouter.delete('/:id/:index', dislikePost);
 
 module.exports = likeRouter;

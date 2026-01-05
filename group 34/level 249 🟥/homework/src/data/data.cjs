@@ -1,4 +1,4 @@
-let data = [
+const data = [
     {
         id: 1,
         userName: "luka123",
@@ -15,6 +15,6 @@ let data = [
         ],
     }
 ]
-let usersCount = 0;
+const usersCount = 0;
 
 module.exports = { data, usersCount };

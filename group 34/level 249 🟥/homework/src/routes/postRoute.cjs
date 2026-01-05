@@ -1,7 +1,7 @@
 const express = require('express');
 const postRouter = express.Router();
 
-//^ GET --> /:id, /:userName
+//^ GET --> /:id, /user/:userName
 //^ POST --> /:id
 //^ DELETE --> /:id/:index
 
@@ -14,12 +14,10 @@ const {
 
 postRouter.get('/:id', getUsersPostsById);
 
-postRouter.get('/:userName', getUsersPostsByUserName);
+postRouter.get('/user/:userName', getUsersPostsByUserName);
 
 postRouter.post('/:id', addNewPost);
 
 postRouter.delete('/:id/:index', deletePostWithIdAndIndex);
 
 module.exports = postRouter;
-
-//! Does not Work!
