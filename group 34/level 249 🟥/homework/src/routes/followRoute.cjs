@@ -19,3 +19,5 @@ followRouter.get('/user/:userName', getUsersFollowersWithUserName);
 followRouter.post('/:id', followUser);
 
 followRouter.delete('/:id', unfollowUser);
+
+module.exports = followRouter;
