@@ -52,7 +52,6 @@ const deletePostWithIdAndIndex = (req, res) => {
     if(index < 0 || index >= posts.length) return res.status(400).json({ message: 'Index Out of Range!', success: false });
 
     const deletedPost = posts.splice(index, 1)[0];
-
     res.json({ deletedPost, remaining: posts, success: true });
 }
 

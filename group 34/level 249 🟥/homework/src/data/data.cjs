@@ -9,7 +9,7 @@ const data = [
                 post: "I Love Penguins!", 
                 likes: 2, 
                 comments: [
-                    { user: "gela777", comment: "I love Penguins too!", likes: 10 }
+                    { userName: "gela777", comment: "I love Penguins too!", likes: 10 }
                 ]
             }
         ],
