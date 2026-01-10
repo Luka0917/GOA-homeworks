@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Homework 1</title>
+    <style>
+        body{
+            display: flex;
+            align-items: center;
+            flex-direction: column;
+        }
+        p, li, table{ font-size: 20px }
+        pre{
+            font-size: 20px;
+            background-color: #24273a;
+            color: #a6cc6f;
+            padding: 0px 20px;
+            border-radius: 30px;
+        }
+    </style>
+</head>
+<body>
+    <h2>DBMS & RDBMS</h2>
+
+    <p><b>DBMS</b>: DataBase Management System</p>
+    <p>It is a software that is used to store, manage and retrive data efficiently.</p>
+    <p>It allows users and applications to:</p>
+    <ul>
+        <li>Store Data</li>
+        <li>Read Data</li>
+        <li>Update Data</li>
+        <li>Delete Data</li>
+    </ul>
+    <p>Examples:</p>
+    <ul>
+        <li>MySQL</li>
+        <li>Oracle</li>
+        <li>MongoDB</li>
+        <li>PostgreSQL</li>
+    </ul>
+    <p>Example:</p>
+    <pre><code>
+{
+    "name": "Luka",
+    "age": 17,
+    "skills": ["JavaScript", "Python"]
+}
+    </code></pre>
+
+    <p><b>RDBMS</b>: Relational Database Management System</p>
+    <p>It is a type of DBMS that stores data in <b>tables</b> and connects these tables using <b>relationship</b></p>
+    <p>It allows users and applications to:</p>
+    <ul>
+        <li>Organizes data into tables</li>
+        <li>Uses primary keys and foreign keys</li>
+        <li>Maintains relationships between tables</li>
+        <li>Uses SQL to manage data</li>
+    </ul>
+    <p><b>Primary Keys</b>: unique identifier for a row</p>
+    <p><b>Foreign keys</b>: links one table to another</p>
+    <p>Examples:</p>
+    <ul>
+        <li>MySQL</li>
+        <li>Oracle</li>
+        <li>PostgreSQL</li>
+        <li>SQL Server</li>
+    </ul>
+    <p>Example:</p>
+    <div style="display: flex; gap:50px;">
+        <table border="1">
+            <tr>
+                <th>id(PK)</th>
+                <th>name</th>
+                <th>age</th>
+            </tr>
+            <tr>
+                <td>1</td>
+                <td>Luka</td>
+                <td>17</td>
+            </tr>
+        </table>
+        <table border="1">
+            <tr>
+                <th>id(PK)</th>
+                <th>user_id(FK)</th>
+                <th>skill</th>
+            </tr>
+            <tr>
+                <td>1</td>
+                <td>1</td>
+                <td>JavaScript</td>
+            </tr>
+            <tr>
+                <td>2</td>
+                <td>1</td>
+                <td>Python</td>
+            </tr>
+        </table>
+    </div>
+    <p><b>RDBMS</b> is same as <b>DBMS</b> but it uses <b>tables</b> and <b>relations</b> between tables.</p>
+
+
+    <h2>Relational Databases & Irrational Databases(NoSQL)</h2>
+
+    <p>Relational Databases</p>
+    <ol>
+        <li><b>Tables</b>: Data is stored in rows(records) and columns(fields).</li>
+        <br>
+        <li>
+            <b>relationships</b>:
+            <ul>
+                <li><b>One-to-One</b> → One row in table A matches one row in table B</li>
+                <ul><li><b>Example</b>: Each person has one passport</li></ul>
+                <li><b>One-to-Many</b> → One row in table A matches many rows in table B</li>
+                <ul><li><b>Example</b>: One user can have many posts</li></ul>
+                <li><b>Many-to-Many</b> → Many rows in table A match many rows in table B</li>
+                <ul><li><b>Example</b>: Students ↔ Courses (students can take multiple courses, each course has many students)</li></ul>
+            </ul>
+        </li>
+        <br>
+        <li><b>Schema</b>: RDBs have a fixed structure (columns must be defined in advance).</li>
+        <br>
+        <li><b>SQL</b>: You use SQL to create, read, update, and delete data.</li>
+        <br>
+        <li>
+            <b>ACID Properties</b>: (ACID = rules that make database transactions safe and reliable.)
+            <ul>
+                <li><b>Atomicity</b>: Everything in a transaction happens or nothing happens</li>
+                <ul><li><b>Example</b>: Transfer $10 → subtract $10 from A and add $10 to B. If one fails, nothing happens.</li></ul>
+                <li><b>Consistency</b>: Data stays correct</li>
+                <ul><li><b>Example</b>: Age cannot be negative. DB ensures this rule.</li></ul>
+                <li><b>Isolation</b>: Transactions don't interfere</li>
+                <ul><li><b>Example</b>: Two users updating the same row at the same time won't break data.</li></ul>
+                <li><b>Durability</b>: Once saved, data is permanent</li>
+                <ul><li><b>Example</b>: Your bank balance is safe even if the system crashes after the transaction.</li></ul>
+            </ul>
+        </li>
+    </ol>
+
+    <p>Irrational Databases</p>
+    <ol>
+        <li><b>No tables</b>: Stores data as documents, key-value pairs, graphs, or wide-column stores.</li>
+        <li><b>Flexible structure</b>: Each record(row) can have different fields(column).</li>
+        <li><b>Scales easily</b>: Handles huge amounts of data and high traffic.</li>
+        <li><b>No strict relationships</b>: Tables (or documents) don't need to be linked.</li>
+        <li><b>Query languages differ</b>: MongoDB uses MQL(MongoDB Query Language), others have their own syntax.</li>
+    </ol>
+
+
+    <h2>SQL</h2>
+
+    <p><b>SQL</b> = Structured Query Language</p>
+    <ul>
+        <li>It is the <b>language</b> used to talk to <b>relational databases</b>(RDBMS).</li>
+        <li>You use it to <b>store</b>, <b>read</b>, <b>update</b>, and <b>delete</b> data.</li>
+        <br>
+        <li><b>Example</b>: MySQL, Oracle, SQL Server → all use SQL.</li>
+    </ul>
+</body>
+</html>
