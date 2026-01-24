@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Homework 2</title>
+    <style>
+        body{
+            display: flex;
+            align-items: center;
+            flex-direction: column;
+        }
+        #main{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 100px;
+            margin-top: 75px;
+        }
+        pre{
+            font-size: 20px;
+            background-color: #24273a;
+            color: #a6cc6f;
+            padding: 20px 20px;
+            border-radius: 30px;
+        }
+        .examples{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+        }
+        p{
+            font-size: 20px;
+        }
+    </style>
+</head>
+<body>
+    <h1>SQL INJECTION</h1>
+
+    <h3>Code:</h3>
+    <pre><code>SELECT * FROM users WHERE userName = 'INPUT';</code></pre>
+
+    <div id="main">
+        <div class="examples">
+            <p><b>Input</b>: Luka123</p>
+            <h2>Result:</h2>
+            <pre><code>SELECT * FROM users WHERE userName = 'Luka123';</code></pre>
+        </div>
+
+        <div class="examples">
+            <p><b>Input</b>: ' OR 1=1 --</p>
+            <h2>Result:</h2>
+            <pre><code>SELECT * FROM users WHERE userName = '' OR 1=1 --';</code></pre>
+        </div>
+
+        <div class="examples">
+            <p><b>Input</b>: '; DROP TABLE users; --</p>
+            <h2>Result:</h2>
+            <pre><code>SELECT * FROM users WHERE userName = ''; DROP TABLE users; --'</code></pre>
+        </div>
+    </div>
+</body>
+</html>
