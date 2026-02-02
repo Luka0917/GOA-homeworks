@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Homework</title>
+</head>
+<body>
+    <h1>SQL Clause</h1>
+    <div>
+        <p><b>CREATE TABLE IF NOT EXISTS</b> users() --- გამოიყენება მონაცემთა ცხრილის შესაქმნელათ</p>
+        <p><b>SELECT</b> * <b>FROM</b> users --- გამოიყენება მონაცემების წამოსაღებათ</p>
+        <p><b>SELECT</b> name, age <b>FROM</b> users --- გამოიყენება კონკრეტული სვეტის წამოსაღებათ</p>
+        <p><b>SELECT</b> * <b>FROM</b> users <b>WHERE</b> age > 18 --- გამოიყენება რიგების გასაფილტრად და მათ წამოსაღებათ</p>
+        <p><b>AND</b>, <b>OR</b>, <b>NOT</b> --- ლოგიკური ოპერატორები</p>
+        <p><b>INSERT INTO</b> users (name, age, country) <b>VALUES</b> ('Luka', 16, 'Georgia') --- გამოიყენება ახალი მონაცემების დასამატებლად</p>
+        <p><b>DELETE FROM</b> users <b>WHERE</b> age < 13 --- გამოიყენება მონაცემების წასაშლელად</p>
+        <p><b>SELECT</b> * <b>FROM</b> users <b>ORDER BY</b> age <b>ASC</b> --- ალაგებს მონაცემების ზრდადობით (<b>DESC</b> --- კლებადობით)</p>
+        <p><b>SELECT</b> * <b>FROM</b> users <b>LIMIT</b> 5 --- აბრუნებს მხოლოდ იმდენ მონაცემთა რიგს რამდენიც ლიმიტის შემდეგ წერია(5)</p>
+        <p><b>SELECT DISTINCT</b> country <b>FROM</b> users --- აშორებს დუპლიკატებს</p>
+        <p><b>SELECT</b> * <b>FROM</b> users <b>WHERE</b> name <b>LIKE</b> 'Lu%' --- გამოიყენება კონკრეტული ელემენტის მოსაძებნათ (<b>%</b> --- ნებისმიერი რიცხვი ან ასო, <b>_</b> --- მხოლოდ ერთი ასო)</p>
+        <p><b>DROP TABLE</b> users --- შლის ცხრილს</p>
+    </div>
+</body>
+</html>
