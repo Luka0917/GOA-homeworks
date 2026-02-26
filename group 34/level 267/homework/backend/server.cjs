@@ -12,7 +12,7 @@ app.post('/sales', (req, res) => {
     const { product_name, category, price, quantity } = req.body;
 
     if(!product_name || !category || price === null || quantity === null){
-        return res.status(400).json({ message: 'Missing required fields' });
+        return res.status(400).json({ message: 'fill all fields' });
     }
 
     const stmt = db.prepare(`
