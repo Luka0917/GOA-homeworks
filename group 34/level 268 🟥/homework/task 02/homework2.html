@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Homework 2</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body{ padding: 27px 450px }
+        hr{ margin-bottom: 20px }
+        p, li{ font-size: 20px }
+        #p1{ margin-bottom: 50px }
+        ul, ol{
+            margin-bottom: 50px;
+            list-style-position: inside;
+        }
+        #pros-cons-div{
+            display: flex;
+            gap: 100px;
+            margin-top: 50px;
+        }
+        .divs{ width: 100% }
+    </style>
+</head>
+<body>
+    <h1>Radix Sort</h1>
+    <hr>
+    <p id="p1">A <b>non-comparative</b> sorting algorithm that sorts numbers digit by digit using Counting Sort as a helper at each step</p>
+
+    <h2>Key Terms</h2>
+    <hr>
+    <ul>
+        <li><b>LSD (Least Significant Digit)</b> - sorts right to left (ones -> tens -> hundreds) used for integers</li>
+        <li><b>MSD (Most Significant Digit)</b> - sorts left to right <u>better for strings</u></li>
+        <li><b>Stable sort</b> - equal elements keep their original relative order</li>
+        <li><b>Non-comparative</b> - never compares two elements directly groups by digit only</li>
+        <li><b>k</b> - number of digits in the largest number (802 -> k = 3)</li>
+    </ul>
+
+    <h2>How It Works</h2>
+    <hr>
+    <ol>
+        <li>Find the largest number to know how many passes are needed (k)</li>
+        <li>Sort all numbers by their <b>ones digit</b> using counting sort</li>
+        <li>Repeat for <b>tens</b> then <b>hundreds</b> and so on</li>
+        <li>After all k passes the array is fully sorted</li>
+    </ol>
+
+    <h2>Time & Space Complexity</h2>
+    <hr>
+    <p id="p2"><b>Time</b>: O(n * k)</p>
+    <p><b>Space</b>: O(n + k)</p>
+    <p>n = number of elements | k = number of digits in the largest number</p>
+
+    <div id="pros-cons-div">
+        <div class="divs">
+            <h2>Pros</h2>
+            <hr>
+            <ul>
+                <li>Faster than O(n log n) sorts <u>when k is small</u></li>
+                <li>Stable sort</li>
+                <li>No element comparisons</li>
+            </ul>
+        </div>
+        <div class="divs">
+            <h2>Cons</h2>
+            <hr>
+            <ul>
+                <li>Needs extra memory — not in-place</li>
+                <li>Slower <u>when k is large</u></li>
+                <li>Doesn't work directly on floats or negative numbers</li>
+                <li>Only good for integers or fixed-length strings</li>
+            </ul>
+        </div>
+    </div>
+</body>
+</html>
