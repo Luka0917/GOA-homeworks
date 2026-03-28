@@ -1,0 +1,28 @@
+.help = ყველა dot command-ის სია
+.help [command] = კონკრეტული ბრძანების დახმარება
+.quit = გამოდი sqlite3-დან
+
+.headers on/off = სვეტების სახელები ჩართე/გამორთე
+.mode [type] = სადაც type შეიძლება იყოს column, table, csv, list და სხვა
+.nullvalue NULL = NULL მნიშვნელობების ჩვენება (ნაცვლად ცარიელისა)
+
+.tables = ყველა ცხრილის სია
+.schema = ყველა ცხრილის CREATE SQL
+.schema [table] = კონკრეტული ცხრილის სქემა
+SELECT sql FROM sqlite_master WHERE type='table'; = სრული SQL აგებულება query-ით
+SELECT name FROM sqlite_master WHERE type='table' AND name='[table]'; = შეამოწმე ცხრილი არსებობს თუ არა
+
+.once file.txt = შემდეგი ერთი query-ის შედეგი ფაილში
+.output file.txt = ყველა შემდეგი query ფაილში
+.output stdout = ტერმინალზე დაბრუნება
+.dump = მთლიანი DB SQL-ად (CREATE + INSERT)
+.backup file.db = binary backup ფაილი
+.read file.sql = SQL ფაილის გაშვება sqlite3-ში
+
+.timer on/off = query-ის შესრულების დრო
+.stats on/off = მეხსიერება, cache hits და სხვა
+
+sqlite3 mydb.db = DB-ის გახსნა / შექმნა
+Remove-Item mydb.db = DB-ის წაშლა
+Get-Content file.sql | sqlite3 mydb.db = SQL ფაილის გაშვება DB-ზე
+sqlite3 mydb.db "SELECT * FROM t;" = ერთი query ტერმინალიდანვე
