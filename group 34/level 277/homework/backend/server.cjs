@@ -9,16 +9,16 @@ const PORT = 1717;
 app.use(express.json());
 app.use(cors());
 
-//^ GET /tasks -> get all tasks
-//^ GET /tasks/:id -> get one task
-//^ GET /history -> get all history
+//^ GET /tasks            -> get all tasks
+//^ GET /tasks/:id        -> get one task
+//^ GET /history          -> get all history
 //^ GET /history/:task_id -> get history for a specific task
-//^ GET /stats -> overview stats
+//^ GET /stats            -> overview stats
 
-//^ POST /tasks -> create a task
+//^ POST /tasks              -> create a task
 //^ POST /tasks/:id/complete -> complete a task (archives to history)
 
-//^ DELETE /tasks -> clear tasks
+//^ DELETE /tasks     -> clear tasks
 //^ DELETE /tasks/:id -> delete a task
 
 db.exec(`
