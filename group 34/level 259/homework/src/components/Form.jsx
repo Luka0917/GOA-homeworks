@@ -33,7 +33,7 @@ export default function Form({ setNotes }){
     }
 
     return (
-        <div className="bg-[#141E30] bg-gradient-to-l from-[#243B55] to-[#141E30] p-10 rounded-4xl shadow-[5px_5px_20px_rgba(255,255,255,0.5)]">
+        <div className="bg-[#141E30] bg-linear-to-l from-[#243B55] to-[#141E30] p-10 rounded-4xl shadow-[5px_5px_20px_rgba(255,255,255,0.5)]">
             <p className="text-4xl font-bold text-center text-white">Add New Note</p>
             <form onSubmit={formHandle} className="flex justify-center flex-col mt-10">
                 <label htmlFor={titleId} className="text-xl font-semibold text-white">Title</label>
