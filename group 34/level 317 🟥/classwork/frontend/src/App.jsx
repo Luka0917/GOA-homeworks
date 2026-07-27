@@ -1,12 +1,28 @@
-import { useState, useId } from "react"
+import { useState, useId, useEffect } from "react"
 import Navbar from "./components/Navbar"
+import { useStore } from "../store/store";
+import axios from 'axios';
 
 function App() {
   const [todos, setTodos] = useState([]);
+  const { user } = useStore();
   const titleId = useId();
   const descriptionId = useId();
 
-  function addTodo(e){
+  const fetchTodos = async () => {
+      try{
+        const result = await axios.get(`http://localhost:3002/todos/${user.id}`);
+        setTodos(result.data);
+      }catch(err){
+        console.error(err);
+      }
+    }
+
+  useEffect(() => {
+    fetchTodos();
+  }, []);
+
+  async function addTodo(e){
     e.preventDefault();
 
     const formData = new FormData(e.target);
@@ -15,7 +31,13 @@ function App() {
 
     if(!title || !description) return alert('we need Title and Description dumbass!');
 
-    setTodos(prev => [...prev, {title, description}])
+    try{
+      const res = await axios.post('http://localhost:3002/todos', { title, description }, { withCredentials: true });
+      console.log(res.data.message);
+      fetchTodos();
+    }catch(err){
+        console.error(err)
+    }
   }
 
   return (

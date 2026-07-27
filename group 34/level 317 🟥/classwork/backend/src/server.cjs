@@ -11,13 +11,17 @@ const crypto = require('node:crypto');
 const cors = require('cors');
 const app = express();
 const { promisify } = require('node:util');
+const { requireAuth } = require('./auth.cjs');
+const cookieParser = require('cookie-parser');
 
 const db = require('./db.cjs');
+const { error } = require('node:console');
 
 const pbkdf2Async = promisify(crypto.pbkdf2);
 
 app.use(express.json());
-app.use(cors());
+app.use(cors({origin: 'http://localhost:5173', credentials: true}));
+app.use(cookieParser());
 
 app.post('/signup', async (req, res) => {
     const { username, password } = req.body;
@@ -25,11 +29,11 @@ app.post('/signup', async (req, res) => {
     if(!username || !password) return res.status(400).json({ error: 'Username and password is required!' });
 
     try{
-        const salt = crupto.randomBytes(16).toString('hex');
+        const salt = crypto.randomBytes(16).toString('hex');
 
         const hash = await pbkdf2Async(password, salt, CONSTANTS.HASH_ITERATIONS, CONSTANTS.HASH_KEYLEN, CONSTANTS.HASH_DIGSET);
 
-        db.prepare(`INSERT INTO users (usrename, password, salt) VALUES (?, ?, ?, ?);`).run(username, hash.toString('hex'), salt);
+        db.prepare(`INSERT INTO users (username, password, salt) VALUES (?, ?, ?);`).run(username, hash.toString('hex'), salt);
 
         res.status(201).json({ message: 'User created!' });
     }catch(err){
@@ -46,7 +50,7 @@ app.post('/login', async (req, res) => {
 
     if(!username || !password) return res.status(400).json({ error: 'Username and password is required!' });
 
-    const user = db.prepare(`SELECT * FROM users WHERE username = ?`).run(username);
+    const user = db.prepare(`SELECT * FROM users WHERE username = ?`).get(username);
 
     if(!user) return res.status(400).json({ error: 'Invalid password!' });
 
@@ -56,7 +60,7 @@ app.post('/login', async (req, res) => {
         const token = crypto.randomBytes(31).toString('hex');
         const expiresAt = Date.now() + CONSTANTS.ONE_DAY_IN_MS;
 
-        db.prepare(`INSERT INTO sessions (user_id, token, expires_at) VALUES (?, ?, ?)`).run(user.id, token, expiresAt);
+        db.prepare(`INSERT INTO session (user_id, token, expires_at) VALUES (?, ?, ?)`).run(user.id, token, expiresAt);
         
         res.cookie('session_id', token, {
             httpOnly: true,
@@ -65,9 +69,38 @@ app.post('/login', async (req, res) => {
             sameSite: 'lax'
         })
 
-        res.json({ message: 'Login Successful!' });
+        res.json({ message: 'Login Successful!', user });
     }else{
         res.status(400).json({ error: 'Invalid password!' });
+    }
+});
+
+app.post('/todos', requireAuth, async (req, res) => {
+    const { title, description } = req.body;
+    const user_id = req.user.id;
+
+    if(!title || !description) return res.status(400).json({ error: 'we need Title and Description dumbass!' });
+
+    try{
+        const stmt = db.prepare(`INSERT INTO todo (user_id, title, description) VALUES (?, ?, ?)`)
+        stmt.run(user_id, title, description);
+    }catch(err){
+        console.error(err)
+    }
+
+    res.status(201).json({ message: 'todo added!' });
+})
+
+app.get('/todos/:user_id', async (req, res) => {
+    const { user_id } = req.params;
+
+    if(!user_id) return res.status(400).json({ error: 'user ID required!' });
+
+    try{
+        const todos = db.prepare(`SELECT * FROM todo WHERE user_id = ?`).all(user_id);
+        res.json(todos);
+    }catch(err){
+        console.error(err);
     }
 });
 
