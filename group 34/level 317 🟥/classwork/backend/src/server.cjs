@@ -104,4 +104,23 @@ app.get('/todos/:user_id', async (req, res) => {
     }
 });
 
+app.patch('/todos/:id', requireAuth, async (req, res) => {
+    const { id } = req.params;
+    const { completed } = req.body;
+
+    if(!id) return res.status(400).json({ error: 'Todo ID is required!' });
+
+    if(completed !== 0 && completed !== 1) return res.status(400).json({ error: 'Completed must be 0 or 1!' });
+
+    try{
+        const result = db.prepare(`UPDATE todo SET completed = ? WHERE id = ? AND user_id = ?`).run(completed, id, req.user.id);
+
+        if(result.changes === 0) return res.status(404).json({ error: 'Todo not found!' });
+
+        res.json({ message: 'Todo updated successfully!' });
+    }catch(err){
+        console.error(err);
+    };
+});
+
 app.listen(CONSTANTS.PORT, () => { console.log(`server is running on http://localhost:${CONSTANTS.PORT}`) });

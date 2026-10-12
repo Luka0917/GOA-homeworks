@@ -4,5 +4,12 @@
     "cookie-parser": "^1.4.7",
     "cors": "^2.8.6",
     "express": "^5.2.1"
+  },
+  "devDependencies": {
+    "nodemon": "^3.1.14"
+  },
+  "scripts": {
+    "start": "node src/server.cjs",
+    "dev": "nodemon src/server.cjs"
   }
 }
