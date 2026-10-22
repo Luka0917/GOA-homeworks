@@ -1,0 +1,25 @@
+- DHCP (Dynamic Host Configuration Protocol)
+DHCP automatically assigns IP addresses to devices when they connect to a network. 
+It also provides settings such as the default gateway and DNS server. Without DHCP, you may need to configure these settings manually. 
+For example, your router can automatically assign an IP address to your laptop
+
+- ARP (Address Resolution Protocol)
+ARP finds the MAC address associated with an IPv4 address on a local network. 
+When a device wants to send data but doesn't know the destination's MAC address, it sends an ARP request. 
+The device with the matching IP address replies with its MAC address
+
+- NAT (Network Address Translation)
+NAT translates IP address information as data passes through a router. 
+It commonly allows multiple devices in a home network to share one public IPv4 address to access the internet. 
+For example, your phone and laptop can use different private IP addresses while sharing the same public IP address
+
+- ICMP (Internet Control Message Protocol)
+ICMP is used to send network error messages and help check connectivity. 
+The ping command commonly uses ICMP to test whether another device is reachable and measure response time. 
+Network devices can also use ICMP to report problems, such as an unreachable destination
+
+- Routing
+Routing is the process of finding a path for data packets to travel between networks. 
+Routers use routing tables to decide where packets should go next. 
+When you visit a website, routers forward your packets across networks until they reach the destination. 
+Routing can use manually configured routes or dynamic routing protocol
