@@ -1,0 +1,11 @@
+Starting Nmap 7.99 ( https://nmap.org ) at 2026-11-12 06:24 -0500
+Nmap scan report for 10.0.2.2
+Host is up (0.00031s latency).
+MAC Address: 52:54:00:12:35:00 (QEMU virtual NIC)
+Nmap scan report for 10.0.2.3
+Host is up (0.00040s latency).
+MAC Address: 52:54:00:12:35:00 (QEMU virtual NIC)
+Nmap scan report for 10.0.2.15
+Host is up.
+Nmap done: 256 IP addresses (3 hosts up) scanned in 3.07 seconds
+ARP ეხმარება Frame-ებს რომ სწორ მოწყობილობასთან მივიდნენ MAC address-იბს დახმარებით

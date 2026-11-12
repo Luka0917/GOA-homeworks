@@ -1,0 +1,8 @@
+PORT     STATE    SERVICE
+21/tcp   open     ftp
+22/tcp   open     ssh
+80/tcp   open     http
+465/tcp  filtered smtps
+1026/tcp filtered LSA-or-nterm
+nmap მეხმარება რომ დავასკანერო კონკრეტული IP და ვნახო რა PORT-ებია გაშვებული
+wireshark მეხმარება რომ ვნახო ამ სკანირების დროს რა პაკეტები გაიგზავნა და რა პაკეტები მივიღე
